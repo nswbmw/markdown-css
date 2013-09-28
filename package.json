@@ -1,0 +1,27 @@
+{
+  "name": "markdown-css",
+  "version": "0.0.1",
+  "description": "add CSS to Markdown",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nswbmw/markdown-css"
+  },
+  "keywords": [
+    "markdown",
+    "css",
+    "markdown-css"
+  ],
+  "author": "nswbmw",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nswbmw/markdown-css/issues"
+  },
+  "dependencies": {
+    "htmlparser2": "*",
+    "marked": "*"
+  }
+}
