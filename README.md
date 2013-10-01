@@ -11,18 +11,23 @@ As you might expect , markdown-css is a fine choice that add some CSS styles to 
 It's unbelievably easy to use . For example :
 
     var MC = require('markdown-css');
-    
-    MC("[google](http://google.com){{#f00 bold 3em}}", function (result) {
-      console.log(result);
-      //=> <p><a href="http://google.com" style="color:#f00;font-weight:bold;font-size:3em;">google</a></p>
-    });
+
+    var result = MC("[google](http://google.com){{#f00 bold 3em}}");
+    console.log(result);
+    //=> <p><a href="http://google.com" style="color:#f00;font-weight:bold;font-size:3em;">google</a></p>
+
 
 You just need to put some CSS styles between `{{` and `}}` .
 
-Here are some examples :
+### Examples ###
+
+Here are some simple usage :
 
     **hello world**{{#f00 3em 900}}
     //=> <strong style="color:#f00;font-size:3em;font-weight:900;">hello world</strong>
+
+    **{{#f00 3em}}**
+    //=> <strong style="color:#f00;font-size:3em;"></strong>
 
     <p>hello{{#00f bold 1.5em}}world</p>
     //=> <p style="color:#00f;font-weight:bold;font-size:1.5em;">helloworld</p>
@@ -45,7 +50,14 @@ Here are some examples :
     **hello world**{{margin[5px,10px] padding[5px,10px,8px]}}
     //=> <strong style="margin:5px 10px;padding:5px 10px 8px;">hello world</strong>
 
-More exciting is that you can make your customized CSS Mapping, like `#000` means `color:#000` , `bold` means `font-weight:bold` . you can find them in `/lib/toCSS.js` .
+    > hello {{#f00 20px}}world
+    //=> <blockquote>
+         <p style="color:#f00;font-size:20px;">hello world</p>
+         </blockquote>
+
+### Customizable ###
+
+The most exciting is that you can make your customized CSS Mapping, like `#000` means `color:#000` , `bold` means `font-weight:bold` . you can find them in `/lib/toCSS.js` .
     
 
 ### LICENSE ###
