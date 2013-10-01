@@ -26,6 +26,9 @@ Here are some simple usage :
     **hello world**{{#f00 3em 900}}
     //=> <strong style="color:#f00;font-size:3em;font-weight:900;">hello world</strong>
 
+    **hello world**{{color:#0f0 2em line-height:3em}}
+    //=> <strong style="color:#0f0;font-size:2em;line-height:3em;">hello world</strong>
+
     **{{#f00 3em}}**
     //=> <strong style="color:#f00;font-size:3em;"></strong>
 
